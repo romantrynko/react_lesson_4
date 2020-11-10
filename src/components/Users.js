@@ -30,7 +30,7 @@ export default class Users extends Component {
                         <p>{user.name}</p>
                         <p>{user.username}</p>
                         <p>{user.email}</p>
-                        
+                        <button onClick={() => this.props.history.push(`/users/${user.id}`)}>Show user</button>
                         <hr/>
                         </div>
                     ))
