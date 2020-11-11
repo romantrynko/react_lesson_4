@@ -7,17 +7,18 @@ import { NavLink } from 'react-router-dom';
 import User from "./components/User";
 import Comments from "./components/Comments";
 import Comment from "./components/Comment";
+import AllPosts from "./components/AllPosts";
 
 function App() {
   
   return (
     <div>
 
-      <div>
-        <NavLink to='/' >Home</NavLink>
-        <NavLink to='/users'>Users</NavLink>
-        <NavLink to='/posts'>Posts</NavLink>
-        <NavLink to='/comments'>Comments</NavLink>
+    <div class="button">
+      <NavLink  to='/' >Home</NavLink>
+      <NavLink to='/users'>Users</NavLink>
+      <NavLink to='/posts'>Posts</NavLink>
+      <NavLink to='/comments'>Comments</NavLink>
       </div>
 
       <div>
@@ -28,7 +29,7 @@ function App() {
           <Route path='/comments/:id' component={Comment} />
 
           <Route path='/users' component={Users} />
-          <Route path='/posts' component={Posts} />
+          <Route path='/posts' component={AllPosts} />
           <Route path='/comments' component={Comments} />
           
           <Route path='/' render={() => <h1>Homepage</h1>} />

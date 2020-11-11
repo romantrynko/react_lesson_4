@@ -13,19 +13,24 @@ export default class Comments extends Component {
     }
 
     componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/comments?postId' + this.props.match.params.id)
+        fetch('https://jsonplaceholder.typicode.com/comments')
         .then(response => response.json())
         .then(comments => this.setState({comments}))
     }
 
 
     render() {
+
+        const postId = this.props.match.params.id; 
+
         return (
             <div>
                 <h2>Comments</h2>
                 <button onClick={this.goToHome}>Home</button>
                 {
-                    this.state.comments.map(comment => (
+                    this.state.comments.filter(comment => (
+                        comment.postId === Number(postId)
+                    )).map(comment => (
                         <div>
                             <h3>id: {comment.id}</h3>
                             <h3>postId: {comment.postId}</h3>
