@@ -26,12 +26,12 @@ export default class Comment extends React.Component {
 
         return (
             <div>
-            <button onClick={this.goToHome}>Home</button>
+            <button class="btn btn-primary" onClick={this.goToHome}>Home</button>
                 {
                     comment && (
-                        <div>
-                            <h2>{comment.name}</h2>
-                            <h3>{comment.body}</h3>
+                        <div class="alert alert-dark">
+                            <h2>Name: {comment.name}</h2> <hr/>
+                            <h3>Body: {comment.body}</h3>
                             <br/>
                         </div>
                     )

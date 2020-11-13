@@ -12,13 +12,12 @@ import AllPosts from "./components/AllPosts";
 function App() {
   
   return (
-    <div>
+    <div class="container">
 
-    <div class="button">
-      <NavLink  to='/' >Home</NavLink>
-      <NavLink to='/users'>Users</NavLink>
+    <div>
+      <NavLink to='/' >Home</NavLink> <br/>
+      <NavLink to='/users'>Users</NavLink> <br/>
       <NavLink to='/posts'>Posts</NavLink>
-      <NavLink to='/comments'>Comments</NavLink>
       </div>
 
       <div>

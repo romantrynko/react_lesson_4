@@ -20,9 +20,9 @@ export default class AllPosts extends React.Component {
             <div>
                 {
                    this.state.posts.map(post => (
-                       <div>Post
-                           <h3>id: {post.id}</h3>
-                           <h3>userId: {post.userId}</h3>
+                       <div class="alert alert-primary"><h2>Post</h2>
+                           <h3>id: {post.id}</h3> <hr/>
+                           <h3>userId: {post.userId}</h3> <hr/>
                            <h3>title: {post.title}</h3>
                        </div>
                    )) 

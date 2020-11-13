@@ -22,7 +22,7 @@ export default class User extends React.Component {
             <div>
                 {
                     user && (
-                        <div>
+                        <div class="alert alert-dark">
                             <p>{user.name}</p>
                             <p>{user.username}</p>
                             <p>{user.email}</p>

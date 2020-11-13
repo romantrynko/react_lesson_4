@@ -26,17 +26,17 @@ export default class Posts extends Component {
         return (
             <div>
                 <h2>Posts</h2>
-                <button onClick={this.goToHome}>Home</button>
+                <button class="btn btn-primary" onClick={this.goToHome}>Home</button>
                 
                 {
                     this.state.posts.filter(post => (
                         post.userId === Number(userId)
                     )).map(post => (
-                        <div>
+                        <div class="alert alert-success">
                             <p>id: {post.id}</p>
                             <p>userId: {post.userId}</p>
                             <p>title: {post.title}</p>
-                            <button onClick={() => this.props.history.push(`/posts/${post.id}/comments`)}>Show comments</button>
+                            <button class="btn btn-info" onClick={() => this.props.history.push(`/posts/${post.id}/comments`)}>Show comments</button>
                             <hr/>
                            
                         </div>
